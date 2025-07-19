@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villa Toscana - Autentico Ristorante Italiano</title>
+    <meta name="description" content="Villa Toscana - Autentico ristorante italiano con pizze, antipasti e dolci tradizionali" />
+    <meta name="author" content="Villa Toscana" />
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <h1 class="title">Villa Toscana</h1>
+                <p class="subtitle">Autentico Ristorante Italiano</p>
+                <p class="tagline">Tradizione e Sapore dal Cuore della Toscana</p>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <!-- Sezione Pizze -->
+            <section class="section">
+                <div class="section-header">
+                    <div class="section-title-container">
+                        <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 2v6h6"/>
+                            <path d="M21 12A9 9 0 0 0 12 3c-2 0-3 1-3 3s1 3 3 3 3-1 3-3 1-3 3-3a9 9 0 0 0 9 9"/>
+                            <path d="M12 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                        </svg>
+                        <h2 class="section-title">Le Nostre Pizze</h2>
+                    </div>
+                    <p class="section-description">
+                        Pizze preparate con impasto a lievitazione naturale e ingredienti di prima qualità
+                    </p>
+                </div>
+                <div class="menu-grid" id="pizzas-grid">
+                    <!-- Le pizze verranno inserite qui tramite JavaScript -->
+                </div>
+            </section>
+
+            <!-- Sezione Antipasti -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Antipasti e Insalate</h2>
+                    <p class="section-description">
+                        Fresche insalate e antipasti preparati con ingredienti locali di stagione
+                    </p>
+                </div>
+                <div class="menu-grid" id="antipasti-grid">
+                    <!-- Gli antipasti verranno inseriti qui tramite JavaScript -->
+                </div>
+            </section>
+
+            <!-- Sezione Dolci -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Dolci della Tradizione</h2>
+                    <p class="section-description">
+                        Dolci italiani preparati secondo le ricette tradizionali della nonna
+                    </p>
+                </div>
+                <div class="menu-grid" id="dolci-grid">
+                    <!-- I dolci verranno inseriti qui tramite JavaScript -->
+                </div>
+            </section>
+
+            <!-- Sezione Bevande -->
+            <section class="section">
+                <div class="section-header">
+                    <div class="section-title-container">
+                        <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12V7a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v5"/>
+                            <path d="M5 12a5 5 0 0 0 10 0"/>
+                            <path d="M12 12v5"/>
+                            <path d="M6 12h12"/>
+                            <path d="M8 20h8"/>
+                        </svg>
+                        <h2 class="section-title">Bevande</h2>
+                    </div>
+                    <p class="section-description">
+                        Selezione di vini, birre e bevande per accompagnare i nostri piatti
+                    </p>
+                </div>
+                
+                <div class="drinks-grid">
+                    <div class="drink-category">
+                        <div class="drink-header">
+                            <svg class="drink-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 8h1a4 4 0 1 1 0 8h-1"/>
+                                <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"/>
+                                <line x1="6" y1="2" x2="6" y2="8"/>
+                                <line x1="10" y1="2" x2="10" y2="8"/>
+                                <line x1="14" y1="2" x2="14" y2="8"/>
+                            </svg>
+                            <h3 class="drink-title">Caffetteria</h3>
+                        </div>
+                        <div class="drink-list" id="caffetteria-list">
+                            <!-- Caffetteria items -->
+                        </div>
+                    </div>
+                    
+                    <div class="drink-category">
+                        <h3 class="drink-title">Bibite e Acqua</h3>
+                        <div class="drink-list" id="bibite-list">
+                            <!-- Bibite items -->
+                        </div>
+                    </div>
+                    
+                    <div class="drink-category">
+                        <h3 class="drink-title">Birre</h3>
+                        <div class="drink-list" id="birre-list">
+                            <!-- Birre items -->
+                        </div>
+                    </div>
+                    
+                    <div class="drink-category">
+                        <h3 class="drink-title">Vini e Liquori</h3>
+                        <div class="drink-list" id="vini-list">
+                            <!-- Vini items -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-title">Villa Toscana</div>
+            <p class="footer-text">
+                Grazie per aver scelto la nostra cucina italiana autentica
+            </p>
+            <p class="footer-small">
+                🇮🇹 Made with amore in Italy
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
