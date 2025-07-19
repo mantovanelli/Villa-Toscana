@@ -2,49 +2,49 @@
 const menuData = {
     pizzas: [
         {
-            image: "src/assets/pizza-margherita.jpg",
+            image: "img/pizza-margherita.jpg",
             name: "Pizza Margherita",
             description: "La classica pizza italiana con pomodoro San Marzano, mozzarella di bufala DOP e basilico fresco",
             price: "€12.00"
         },
         {
-            image: "src/assets/pizza-napoletana.jpg",
+            image: "img/pizza-napoletana.jpg",
             name: "Pizza Napoletana",
             description: "Autentica pizza napoletana con bordi alti, pomodoro, mozzarella di bufala e basilico",
             price: "€14.00"
         },
         {
-            image: "src/assets/pizza-quattro-stagioni.jpg",
+            image: "img/pizza-quattro-stagioni.jpg",
             name: "Pizza Quattro Stagioni",
             description: "Prosciutto cotto, funghi porcini, carciofi e olive nere con mozzarella",
             price: "€16.00"
         },
         {
-            image: "src/assets/pizza-diavola.jpg",
+            image: "img/pizza-diavola.jpg",
             name: "Pizza Diavola",
             description: "Salame piccante calabrese, mozzarella, pomodoro e peperoncini freschi",
             price: "€15.00"
         },
         {
-            image: "src/assets/pizza-capricciosa.jpg",
+            image: "img/pizza-capricciosa.jpg",
             name: "Pizza Capricciosa",
             description: "Prosciutto cotto, funghi, carciofi, olive e mozzarella",
             price: "€15.50"
         },
         {
-            image: "src/assets/pizza-quattro-formaggi.jpg",
+            image: "img/pizza-quattro-formaggi.jpg",
             name: "Pizza Quattro Formaggi",
             description: "Mozzarella, gorgonzola DOP, parmigiano reggiano e fontina valdostana",
             price: "€14.50"
         },
         {
-            image: "src/assets/pizza-marinara.jpg",
+            image: "img/pizza-marinara.jpg",
             name: "Pizza Marinara",
             description: "La più semplice e tradizionale: pomodoro, aglio, origano e olio extravergine",
             price: "€10.00"
         },
         {
-            image: "src/assets/pizza-prosciutto-funghi.jpg",
+            image: "img/pizza-prosciutto-funghi.jpg",
             name: "Pizza Prosciutto e Funghi",
             description: "Prosciutto cotto di alta qualità e funghi porcini con mozzarella",
             price: "€14.00"
@@ -53,19 +53,19 @@ const menuData = {
     
     antipasti: [
         {
-            image: "src/assets/insalata-caprese.jpg",
+            image: "img/insalata-caprese.jpg",
             name: "Insalata Caprese",
             description: "Mozzarella di bufala DOP, pomodori maturi, basilico fresco e olio extravergine toscano",
             price: "€9.00"
         },
         {
-            image: "src/assets/insalatona-mista.jpg",
+            image: "img/insalatona-mista.jpg",
             name: "Insalatona della Casa",
             description: "Mix di insalate fresche, pomodorini, olive, mozzarella e prosciutto crudo",
             price: "€11.00"
         },
         {
-            image: "src/assets/caesar-salad.jpg",
+            image: "img/caesar-salad.jpg",
             name: "Caesar Salad",
             description: "Lattuga romana, crostini dorati, parmigiano grattugiato e salsa Caesar",
             price: "€10.50"
@@ -74,25 +74,25 @@ const menuData = {
     
     dolci: [
         {
-            image: "src/assets/tiramisu.jpg",
+            image: "img/tiramisu.jpg",
             name: "Tiramisù",
             description: "Il dolce italiano per eccellenza con savoiardi, mascarpone, caffè e cacao",
             price: "€6.00"
         },
         {
-            image: "src/assets/cannoli.jpg",
+            image: "img/cannoli.jpg",
             name: "Cannoli Siciliani",
             description: "Croccanti cialde ripiene di ricotta dolce e gocce di cioccolato",
             price: "€5.50"
         },
         {
-            image: "src/assets/panna-cotta.jpg",
+            image: "img/panna-cotta.jpg",
             name: "Panna Cotta ai Frutti di Bosco",
             description: "Dolce cremoso con coulis di frutti di bosco freschi",
             price: "€5.00"
         },
         {
-            image: "src/assets/gelato.jpg",
+            image: "img/gelato.jpg",
             name: "Gelato Artigianale",
             description: "Tre palline di gelato artigianale (vaniglia, cioccolato, pistacchio)",
             price: "€4.50"
