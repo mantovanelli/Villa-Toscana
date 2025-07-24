@@ -39,6 +39,7 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 1rem;
+    padding-top: 2rem;
 }
 
 .subtitle {
@@ -429,7 +430,8 @@ body {
     flex: 1 0 20%; /* 5 pulsanti = 20% ciascuno */
     opacity: 1;
     border-right: 1px solid rgba(0,0,0,.08);
-    padding: .75rem 0;
+    padding: 1.1rem 0;
+    font-size: 0.9rem;
   }
 
   .lang-switcher button:last-child {
