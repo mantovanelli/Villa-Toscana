@@ -356,9 +356,22 @@ body {
         transform: rotate(360deg);
     }
 }
-/* =========================
-   i18n / language switcher
-   ========================= */
+
+
+/* =========================================================
+   NEW: language switcher + offset per non far “spaginare” tutto
+   ========================================================= */
+:root {
+  --lang-switcher-h: 0px; /* la impostiamo via JS su desktop */
+}
+
+/* Spingi giù l’header / il contenuto quando lo switcher è fixed (desktop) */
+.header,
+.main-content {
+  padding-top: var(--lang-switcher-h);
+}
+
+/* -------- Desktop: centrato e fixed -------- */
 .lang-switcher {
   position: fixed;
   top: 1rem;
@@ -394,23 +407,26 @@ body {
   text-decoration: underline;
 }
 
-/* --- Mobile & tablet: full width --- */
+/* -------- Mobile & tablet: sticky full width -------- */
 @media (max-width: 1024px) {
   .lang-switcher {
-    top: 0;
+    position: sticky;
+    top: env(safe-area-inset-top, 0);
     left: 0;
+    right: 0;
     transform: none;
     width: 100%;
     border-radius: 0;
     gap: 0;
     padding: 0;
     background: #fff;
+    backdrop-filter: none;
     box-shadow: 0 1px 6px rgba(0,0,0,.05);
     justify-content: stretch;
   }
 
   .lang-switcher button {
-    flex: 1 0 20%; /* 5 pulsanti -> 20% ciascuno */
+    flex: 1 0 20%; /* 5 pulsanti = 20% ciascuno */
     opacity: 1;
     border-right: 1px solid rgba(0,0,0,.08);
     padding: .75rem 0;

@@ -61,6 +61,9 @@ async function setLang(lang) {
   markActiveLang(lang);
   localStorage.setItem('lang', lang);
 
+  // >>> aggiorna il padding-top calcolato per header/main-content
+  updateLangSwitcherOffset(); // <-- QUI
+
   // Bootstrap dell'app la prima volta
   if (!appBootstrapped) {
     bootstrapApp();
@@ -287,14 +290,22 @@ function addScrollAnimations() {
   document.querySelectorAll('.section').forEach(section => observer.observe(section));
 }
 
-// Effetti interattivi
 function addInteractiveEffects() {
-  // Parallax leggero header
-  window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const header = document.querySelector('.header');
-    if (header) header.style.transform = `translateY(${scrolled * 0.5}px)`;
-  });
+  const header = document.querySelector('.header');
+  const isMobile = matchMedia('(max-width: 1024px)').matches;
+
+  // Parallax solo su desktop, e throttled con requestAnimationFrame
+  if (!isMobile && header) {
+    let raf = null;
+    window.addEventListener('scroll', () => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        const scrolled = window.pageYOffset || document.documentElement.scrollTop;
+        header.style.transform = `translateY(${scrolled * 0.5}px)`;
+        raf = null;
+      });
+    });
+  }
 
   // Hover card menu
   document.addEventListener('mouseover', (e) => {
@@ -348,3 +359,29 @@ window.VillaToscana = {
   t,
   renderAllLists
 };
+
+/* =========================
+   Lang switcher offset (desktop)
+   ========================= */
+function updateLangSwitcherOffset() {
+  const ls = document.querySelector('.lang-switcher');
+  if (!ls) return;
+
+  const isDesktop = !matchMedia('(max-width: 1024px)').matches;
+  const extra = 16; // piccolo margine sotto allo switcher su desktop
+  const h = isDesktop ? (ls.getBoundingClientRect().height + extra) : 0;
+
+  document.documentElement.style.setProperty('--lang-switcher-h', h + 'px');
+}
+
+// utility per non ricalcolare mille volte su resize
+function debounce(fn, wait = 150) {
+  let t;
+  return (...args) => {
+    clearTimeout(t);
+    t = setTimeout(() => fn.apply(this, args), wait);
+  };
+}
+
+window.addEventListener('load', updateLangSwitcherOffset);
+window.addEventListener('resize', debounce(updateLangSwitcherOffset, 150));
